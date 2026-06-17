@@ -815,7 +815,7 @@
 <body>
 
 <!-- ANNOUNCEMENT -->
-<div class="announcement">? Free delivery on orders above ?1499 &nbsp;&nbsp;|&nbsp;&nbsp; New arrivals every Friday ?</div>
+<div class="announcement">Free delivery on orders above ₹1499 &nbsp;&nbsp;|&nbsp;&nbsp; New arrivals every Friday</div>
 
 <!-- HEADER -->
 <header>
@@ -830,7 +830,7 @@
     </ul>
     <div class="nav-actions">
       <button class="cart-btn" onclick="openDrawer()">
-        &#128722; Cart
+        🛒 Cart
         <span class="cart-count" id="cartCount">0</span>
       </button>
     </div>
@@ -873,9 +873,7 @@
       <p>Refined silhouettes for every occasion</p>
     </div>
   </div>
-  <div class="product-grid" id="womenGrid">
-    <!-- Cards injected by JS -->
-  </div>
+  <div class="product-grid" id="womenGrid"></div>
 </section>
 
 <hr class="divider"/>
@@ -1002,18 +1000,18 @@
 <div class="drawer" id="drawer">
   <div class="drawer-header">
     <h3>Your Bag</h3>
-    <button class="close-drawer" onclick="closeDrawer()">&#10005;</button>
+    <button class="close-drawer" onclick="closeDrawer()">✕</button>
   </div>
   <div class="drawer-items" id="drawerItems">
     <div class="empty-cart">
-      <div class="icon">&#128722;</div>
+      <div class="icon">🛒</div>
       <p>Your bag is empty.<br>Add something beautiful.</p>
     </div>
   </div>
   <div class="drawer-footer" id="drawerFooter" style="display:none">
-    <div class="subtotal-row"><span>Subtotal</span><span id="subtotalAmt">?0</span></div>
-    <div class="subtotal-row"><span>Delivery</span><span id="deliveryAmt">?99</span></div>
-    <div class="total-row"><span>Total</span><span id="totalAmt">?0</span></div>
+    <div class="subtotal-row"><span>Subtotal</span><span id="subtotalAmt">₹0</span></div>
+    <div class="subtotal-row"><span>Delivery</span><span id="deliveryAmt">₹99</span></div>
+    <div class="total-row"><span>Total</span><span id="totalAmt">₹0</span></div>
     <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout</button>
     <button class="continue-btn" onclick="closeDrawer()">Continue Shopping</button>
   </div>
@@ -1024,16 +1022,16 @@
   <div class="modal">
     <div class="modal-header">
       <h3>Review & Confirm</h3>
-      <button class="close-drawer" onclick="closeCheckout()">&#10005;</button>
+      <button class="close-drawer" onclick="closeCheckout()">✕</button>
     </div>
     <div class="modal-body">
       <h4 style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--mid);margin-bottom:14px;">Order Summary</h4>
       <div class="order-items" id="orderItems"></div>
       <div class="bill-summary">
-        <div class="bill-row"><span>Subtotal</span><span id="billSub">?0</span></div>
-        <div class="bill-row"><span>Delivery</span><span id="billDel">?99</span></div>
-        <div class="bill-row"><span>Discount</span><span style="color:#27AE60" id="billDisc">–?0</span></div>
-        <div class="bill-row total"><span>Total Payable</span><span id="billTotal">?0</span></div>
+        <div class="bill-row"><span>Subtotal</span><span id="billSub">₹0</span></div>
+        <div class="bill-row"><span>Delivery</span><span id="billDel">₹99</span></div>
+        <div class="bill-row"><span>Discount</span><span style="color:#27AE60" id="billDisc">–₹0</span></div>
+        <div class="bill-row total"><span>Total Payable</span><span id="billTotal">₹0</span></div>
       </div>
       <h4 style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--mid);margin-bottom:16px;">Delivery Details</h4>
       <div class="form-row">
@@ -1059,7 +1057,7 @@
     </div>
     <div class="modal-footer">
       <button class="cancel-order" onclick="closeCheckout()">Back to Cart</button>
-      <button class="confirm-btn" onclick="confirmOrder()">&#10003; Confirm Order</button>
+      <button class="confirm-btn" onclick="confirmOrder()">✓ Confirm Order</button>
     </div>
   </div>
 </div>
@@ -1067,7 +1065,7 @@
 <!-- SUCCESS MODAL -->
 <div class="success-modal" id="successModal">
   <div class="success-box">
-    <div class="success-icon">&#127873;</div>
+    <div class="success-icon">🎁</div>
     <h3>Order Placed!</h3>
     <p>Thank you for shopping with Anaqah.<br>Your order has been received and is being processed.</p>
     <div class="success-order-id">
@@ -1079,12 +1077,11 @@
 </div>
 
 <!-- TOAST -->
-<div class="toast" id="toast"><span class="tick">?</span><span id="toastMsg"></span></div>
+<div class="toast" id="toast"><span class="tick">✓</span><span id="toastMsg"></span></div>
 
 <script>
 /* ===================== PRODUCT DATA ===================== */
 const products = [
-  // WOMEN
   { id:1, cat:'women', label:'Women', name:'Silk Kaftan Dress', desc:'Flowing silhouette, hand-embroidered hem', price:2799, img:'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&q=80', badge:'New', wasPrice:3499 },
   { id:2, cat:'women', label:'Women', name:'Linen Palazzo Set', desc:'Breathable two-piece, summer essential', price:1999, img:'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80' },
   { id:3, cat:'women', label:'Women', name:'High-Waist Trousers', desc:'Classic cut, premium poly-cotton blend', price:1499, img:'https://images.unsplash.com/photo-1554412933-514a83d2f3c8?auto=format&fit=crop&w=600&q=80' },
@@ -1092,25 +1089,21 @@ const products = [
   { id:5, cat:'women', label:'Women', name:'Wrap Maxi Dress', desc:'Adjustable tie-waist, vibrant print', price:1749, img:'https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80' },
   { id:6, cat:'women', label:'Women', name:'Broderie Blouse', desc:'Eyelet detail, relaxed fit', price:1299, img:'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=600&q=80', badge:'New' },
 
-  // CHILDREN — GIRLS
   { id:7, cat:'girls', label:'Girls', name:'Floral Frock', desc:'Cotton twirl dress, ages 2–8', price:899, img:'https://images.unsplash.com/photo-1604671801908-b6b73ef31d5a?auto=format&fit=crop&w=600&q=80', badge:'New' },
   { id:8, cat:'girls', label:'Girls', name:'Tutu Skirt Set', desc:'Rainbow tulle with matching top', price:1099, img:'https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?auto=format&fit=crop&w=600&q=80' },
   { id:9, cat:'girls', label:'Girls', name:'Denim Jumpsuit', desc:'Adjustable straps, ages 3–10', price:1299, img:'https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?auto=format&fit=crop&w=600&q=80' },
   { id:10, cat:'girls', label:'Girls', name:'Party Dress', desc:'Velvet bow detail, festive wear', price:1499, img:'https://images.unsplash.com/photo-1476234251651-f353703a034d?auto=format&fit=crop&w=600&q=80', badge:'New' },
 
-  // CHILDREN — BOYS
   { id:11, cat:'boys', label:'Boys', name:'Kurta Pyjama Set', desc:'Cotton blend, festive collection', price:999, img:'https://images.unsplash.com/photo-1591454919040-6f05a1f0c3cc?auto=format&fit=crop&w=600&q=80' },
   { id:12, cat:'boys', label:'Boys', name:'Chino Shorts + Shirt', desc:'Smart casual, ages 3–12', price:1199, img:'https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?auto=format&fit=crop&w=600&q=80' },
   { id:13, cat:'boys', label:'Boys', name:'Printed Tee + Joggers', desc:'Comfy everyday play outfit', price:799, img:'https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=600&q=80', badge:'Sale', wasPrice:1099 },
 
-  // NEWBORNS
   { id:14, cat:'newborn', label:'Newborn', name:'Organic Onesie 3-Pack', desc:'GOTS certified organic cotton, 0–3 months', price:999, img:'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80', badge:'New' },
   { id:15, cat:'newborn', label:'Newborn', name:'Swaddle Blanket Set', desc:'Muslin cotton, 4-layer softness', price:799, img:'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=600&q=80' },
   { id:16, cat:'newborn', label:'Newborn', name:'Sleepsuit Gift Set', desc:'5-piece bundled layette, 0–6 months', price:1799, img:'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=600&q=80', badge:'New' },
   { id:17, cat:'newborn', label:'Newborn', name:'Knit Beanie & Bootie Set', desc:'Merino wool blend, hypoallergenic', price:599, img:'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=600&q=80' },
   { id:18, cat:'newborn', label:'Newborn', name:'Romper with Headband', desc:'Floral print, snap closure, 0–3 months', price:699, img:'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80' },
 
-  // GIFT SETS
   { id:19, cat:'sets', label:'Gift Set', name:'New Baby Luxury Box', desc:'Organic onesie + swaddle + toy', price:2499, img:'https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=600&q=80', badge:'New' },
   { id:20, cat:'sets', label:'Gift Set', name:'Mother & Baby Duo', desc:'Kaftan for mom + romper for baby', price:3499, img:'https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80' },
 ];
@@ -1129,14 +1122,14 @@ function renderProducts(filterCatKey = 'all') {
     const grid = document.getElementById(gridId);
     if(!grid) return;
     const badge = p.badge ? `<div class="card-badge ${p.badge==='New'?'new':''}">${p.badge}</div>` : '';
-    const wasPriceHtml = p.wasPrice ? `<span>?${p.wasPrice.toLocaleString()}</span>` : '';
+    const wasPriceHtml = p.wasPrice ? `<span>₹${p.wasPrice.toLocaleString()}</span>` : '';
     grid.innerHTML += `
       <div class="card" data-cat="${p.cat}">
         <div class="card-img-wrap">
           <img src="${p.img}" alt="${p.name}" loading="lazy"/>
           ${badge}
           <div class="card-actions">
-            <button class="quick-view" title="Wishlist">&#9825;</button>
+            <button class="quick-view" title="Wishlist">♡</button>
           </div>
         </div>
         <div class="card-body">
@@ -1144,14 +1137,13 @@ function renderProducts(filterCatKey = 'all') {
           <div class="card-title">${p.name}</div>
           <div class="card-desc">${p.desc}</div>
           <div class="card-foot">
-            <div class="card-price">?${p.price.toLocaleString()}${wasPriceHtml}</div>
+            <div class="card-price">₹${p.price.toLocaleString()}${wasPriceHtml}</div>
             <button class="add-cart" onclick="addToCart(${p.id})">Add to Bag</button>
           </div>
         </div>
       </div>`;
   });
 
-  // Hide empty section headings visually if no items
   const secIds = ['women','children','newborns'];
   secIds.forEach(sid => {
     const sec = document.getElementById(sid);
@@ -1160,7 +1152,6 @@ function renderProducts(filterCatKey = 'all') {
       if(grid) sec.style.display = grid.children.length === 0 ? 'none' : '';
     }
   });
-  // For children section (shared grid)
   const childSec = document.getElementById('children');
   if(childSec) {
     const g = document.getElementById('childrenGrid');
@@ -1219,12 +1210,12 @@ function updateCartUI() {
   const delivery = sub >= 1499 ? 0 : 99;
   const total = sub + delivery;
 
-  document.getElementById('subtotalAmt').textContent = `?${sub.toLocaleString()}`;
-  document.getElementById('deliveryAmt').textContent = delivery === 0 ? 'FREE' : `?${delivery}`;
-  document.getElementById('totalAmt').textContent = `?${total.toLocaleString()}`;
+  document.getElementById('subtotalAmt').textContent = `₹${sub.toLocaleString()}`;
+  document.getElementById('deliveryAmt').textContent = delivery === 0 ? 'FREE' : `₹${delivery}`;
+  document.getElementById('totalAmt').textContent = `₹${total.toLocaleString()}`;
 
   if(items.length === 0) {
-    drawerItems.innerHTML = `<div class="empty-cart"><div class="icon">&#128722;</div><p>Your bag is empty.<br>Add something beautiful.</p></div>`;
+    drawerItems.innerHTML = `<div class="empty-cart"><div class="icon">🛒</div><p>Your bag is empty.<br>Add something beautiful.</p></div>`;
     footer.style.display='none';
   } else {
     footer.style.display='';
@@ -1234,7 +1225,7 @@ function updateCartUI() {
         <div class="cart-item-info">
           <div class="cart-item-cat">${i.label}</div>
           <div class="cart-item-name">${i.name}</div>
-          <div class="cart-item-price">?${(i.price * i.qty).toLocaleString()}</div>
+          <div class="cart-item-price">₹${(i.price * i.qty).toLocaleString()}</div>
           <div class="cart-item-qty">
             <button class="qty-btn" onclick="changeQty(${i.id},-1)">-</button>
             <span class="qty-num">${i.qty}</span>
@@ -1267,10 +1258,10 @@ function openCheckout() {
   const discount = sub >= 2999 ? Math.round(sub * 0.05) : 0;
   const total = sub + delivery - discount;
 
-  document.getElementById('billSub').textContent = `?${sub.toLocaleString()}`;
-  document.getElementById('billDel').textContent = delivery === 0 ? 'FREE' : `?${delivery}`;
-  document.getElementById('billDisc').textContent = `–?${discount.toLocaleString()}`;
-  document.getElementById('billTotal').textContent = `?${total.toLocaleString()}`;
+  document.getElementById('billSub').textContent = `₹${sub.toLocaleString()}`;
+  document.getElementById('billDel').textContent = delivery === 0 ? 'FREE' : `₹${delivery}`;
+  document.getElementById('billDisc').textContent = `–₹${discount.toLocaleString()}`;
+  document.getElementById('billTotal').textContent = `₹${total.toLocaleString()}`;
 
   document.getElementById('orderItems').innerHTML = items.map(i => `
     <div class="order-item">
@@ -1281,7 +1272,7 @@ function openCheckout() {
           <div class="order-item-qty">Qty: ${i.qty}</div>
         </div>
       </div>
-      <div class="order-item-price">?${(i.price*i.qty).toLocaleString()}</div>
+      <div class="order-item-price">₹${(i.price*i.qty).toLocaleString()}</div>
     </div>`).join('');
 
   document.getElementById('checkoutModal').classList.add('open');
@@ -1292,7 +1283,7 @@ function closeCheckout() {
   openDrawer();
 }
 
-/* ===================== CONFIRM ORDER ===================== */
+/* ===================== CONFIRM ORDER WITH FIXED TELEGRAM INTEGRATION ===================== */
 function confirmOrder() {
   const fname = document.getElementById('fname').value.trim();
   const phone = document.getElementById('phone').value.trim();
@@ -1300,13 +1291,65 @@ function confirmOrder() {
   const city  = document.getElementById('city').value.trim();
   const pin   = document.getElementById('pin').value.trim();
 
+  const emailInput = document.getElementById('email');
+  const email = emailInput ? emailInput.value.trim() : 'N/A';
+  
+  const paymentInput = document.getElementById('payment');
+  const payment = paymentInput ? paymentInput.value : 'COD';
+
   if(!fname || !phone || !addr || !city || !pin) {
     showToast('Please fill in all delivery details');
     return;
   }
 
-  document.getElementById('checkoutModal').classList.remove('open');
   const orderId = '#ANQ-' + Math.floor(100000 + Math.random()*900000);
+  
+  const items = Object.values(cart);
+  let itemsText = "";
+  items.forEach((i, index) => {
+    itemsText += `${index + 1}. ${i.name} (Qty: ${i.qty}) - Rs.${i.price * i.qty}\n`;
+  });
+
+  const sub = getSubtotal();
+  const delivery = sub >= 1499 ? 0 : 99;
+  const discount = sub >= 2999 ? Math.round(sub * 0.05) : 0;
+  const total = sub + delivery - discount;
+  const delText = delivery === 0 ? 'FREE' : 'Rs.' + delivery;
+
+  // Safe and clean text formatting for HTML parsing
+  const textMessage = 
+    `<b>🚨 NAYA ORDER AAYA HAI! (Anaqah)</b>\n\n` +
+    `🆔 <b>Order ID:</b> ${orderId}\n` +
+    `━━━━━━━━━━━━━━━━━━━━━\n` +
+    `📦 <b>Items:</b>\n${itemsText}\n` +
+    `💰 <b>Subtotal:</b> Rs.${sub}\n` +
+    `🚚 <b>Delivery:</b> ${delText}\n` +
+    `🏷️ <b>Discount:</b> Rs.${discount}\n` +
+    `💵 <b>Total Payable:</b> Rs.${total}\n` +
+    `━━━━━━━━━━━━━━━━━━━━━\n` +
+    `👤 <b>Customer Name:</b> ${fname}\n` +
+    `📞 <b>Customer Phone:</b> ${phone}\n` +
+    `📧 <b>Customer Email:</b> ${email ? email : 'N/A'}\n` +
+    `📍 <b>Address:</b> ${addr}, ${city} - ${pin}\n` +
+    `💳 <b>Payment Method:</b> ${payment}`;
+
+  const myToken = "8569781395:AAGO_pnozAETAaNdwYzEu51p_ZMmbJNtMrc"; 
+  const myChatId = "7230867454";     
+
+  const safeMessage = encodeURIComponent(textMessage);
+  // parse_mode=HTML is more stable than Markdown for basic styling
+  const telegramUrl = `https://api.telegram.org/bot${myToken}/sendMessage?chat_id=${myChatId}&text=${safeMessage}&parse_mode=HTML`;
+  
+  fetch(telegramUrl)
+    .then(res => {
+      if (!res.ok) {
+         return res.json().then(err => { throw new Error(JSON.stringify(err)) });
+      }
+      console.log("Order details sent successfully to Telegram!");
+    })
+    .catch(err => console.error("Telegram Send Error Details:", err));
+
+  document.getElementById('checkoutModal').classList.remove('open');
   document.getElementById('orderId').textContent = orderId;
   document.getElementById('successModal').classList.add('open');
 
@@ -1327,61 +1370,7 @@ function showToast(msg) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.classList.remove('show'), 2800);
 }
-/* ===================== CONFIRM ORDER (FIXED FULL DETAILS FOR TELEGRAM) ===================== */
-function confirmOrder() {
-  const fname = document.getElementById('fname').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const addr = document.getElementById('addr').value.trim();
-  const city = document.getElementById('city').value.trim();
-  const pin = document.getElementById('pin').value.trim();
 
-  if(!fname || !phone || !addr || !city || !pin) {
-    showToast('Please fill in all delivery details');
-    return;
-  }
-
-  // 1. Order ID generate karna
-  const orderId = '#ANQ-' + Math.floor(100000 + Math.random()*900000);
-
-  // 2. Jo message Telegram par sunder tarike se dikhega
-  const telegramMessage = `
-🛍️ *New Order Placed!*
-━━━━━━━━━━━━━━━━━━
-🆔 *Order ID:* ${orderId}
-👤 *Name:* ${fname}
-📞 *Phone:* ${phone}
-📍 *Address:* ${addr}, ${city} - ${pin}
-  `;
-
-  // ✅ Aapka NAYA Telegram Token aur purani Chat ID yahan set hai
-  const botToken = "8801145500:AAFuiB0RiaNRMzkqohNvIXY0mmZs76iIqYw"; 
-  const chatId = "7230867454"; 
-
-  const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
-  // 3. Telegram ko background me message bhejna
-  fetch(telegramUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: telegramMessage,
-      parse_mode: 'Markdown'
-    })
-  })
-  .then(res => console.log("Telegram notification sent!"))
-  .catch(err => console.error("Telegram error:", err));
-
-  // 4. Screen par Success Pop-up dikhana aur cart khali karna
-  document.getElementById('checkoutModal').classList.remove('open');
-  document.getElementById('orderId').textContent = orderId;
-  document.getElementById('successModal').classList.add('open');
-
-  cart = {};
-  updateCartUI();
-}
 /* ===================== INIT ===================== */
 renderProducts('all');
 </script>
