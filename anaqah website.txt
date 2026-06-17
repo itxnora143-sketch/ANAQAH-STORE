@@ -1327,6 +1327,7 @@ function showToast(msg) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.classList.remove('show'), 2800);
 }
+/* ===================== CONFIRM ORDER (FIXED FULL DETAILS FOR TELEGRAM) ===================== */
 function confirmOrder() {
   const fname = document.getElementById('fname').value.trim();
   const phone = document.getElementById('phone').value.trim();
@@ -1352,7 +1353,7 @@ function confirmOrder() {
 📍 *Address:* ${addr}, ${city} - ${pin}
   `;
 
-  // ✅ Aapka Real Telegram Token aur Chat ID yahan set ho gaya hai
+  // ✅ Aapka NAYA Telegram Token aur purani Chat ID yahan set hai
   const botToken = "8569781395:AAGO_pnozAETAaNdwYzEu51p_ZMmbJNtMrc"; 
   const chatId = "7230867454"; 
 
