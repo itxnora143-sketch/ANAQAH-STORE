@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anaqah � Curated Fashion</title>
+  <title>Anaqah — Curated Fashion</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
     /* ===== TOKENS ===== */
@@ -840,7 +840,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <p class="hero-eyebrow">New Season � Summer 2026</p>
+    <p class="hero-eyebrow">New Season — Summer 2026</p>
     <h1 class="hero-title">Dress them<br>in <em>elegance</em></h1>
     <p class="hero-sub">Curated fashion for women who know their worth, and little ones who deserve the best. Every piece, thoughtfully chosen.</p>
     <div class="hero-ctas">
@@ -898,7 +898,7 @@
   <div class="section-head">
     <div>
       <h2>Newborn <em>Essentials</em></h2>
-      <p>Gentle on delicate skin � organic & certified safe</p>
+      <p>Gentle on delicate skin — organic & certified safe</p>
     </div>
   </div>
   <div class="product-grid" id="newbornGrid"></div>
@@ -907,7 +907,7 @@
 <!-- BANNER -->
 <div class="banner">
   <h3>Crafted with love. <em style="font-family:var(--display);font-style:italic;color:var(--rose)">Delivered with care.</em></h3>
-  <p>All fabrics are OEKO-TEX� certified. Safe for babies, kind to the planet.</p>
+  <p>All fabrics are OEKO-TEX® certified. Safe for babies, kind to the planet.</p>
   <a href="#newborns" class="btn-primary">Explore Newborn Range</a>
 </div>
 
@@ -916,7 +916,7 @@
   <div class="contact-inner">
     <div class="contact-left">
       <h2>Get in <em>touch</em></h2>
-      <p>We're a small team who cares deeply about every order. Reach out anytime � we'd love to hear from you.</p>
+      <p>We're a small team who cares deeply about every order. Reach out anytime — we'd love to hear from you.</p>
       <div class="contact-detail">
         <label>Address</label>
         <p>Kishan Bagh</p>
@@ -932,7 +932,7 @@
       </div>
       <div class="contact-detail">
         <label>Hours</label>
-        <p>Mon � Sat, 10 AM � 7 PM</p>
+        <p>Mon – Sat, 10 AM – 7 PM</p>
       </div>
     </div>
     <div>
@@ -1032,7 +1032,7 @@
       <div class="bill-summary">
         <div class="bill-row"><span>Subtotal</span><span id="billSub">?0</span></div>
         <div class="bill-row"><span>Delivery</span><span id="billDel">?99</span></div>
-        <div class="bill-row"><span>Discount</span><span style="color:#27AE60" id="billDisc">�?0</span></div>
+        <div class="bill-row"><span>Discount</span><span style="color:#27AE60" id="billDisc">–?0</span></div>
         <div class="bill-row total"><span>Total Payable</span><span id="billTotal">?0</span></div>
       </div>
       <h4 style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--mid);margin-bottom:16px;">Delivery Details</h4>
@@ -1073,7 +1073,7 @@
     <div class="success-order-id">
       Order ID: <strong id="orderId">#ANQ-000000</strong>
     </div>
-    <p style="font-size:12px;color:var(--mid);margin-bottom:28px;">A confirmation will be sent to your email. Estimated delivery: 3�5 business days.</p>
+    <p style="font-size:12px;color:var(--mid);margin-bottom:28px;">A confirmation will be sent to your email. Estimated delivery: 3–5 business days.</p>
     <button class="btn-primary" onclick="closeSuccess()">Continue Shopping</button>
   </div>
 </div>
@@ -1092,23 +1092,23 @@ const products = [
   { id:5, cat:'women', label:'Women', name:'Wrap Maxi Dress', desc:'Adjustable tie-waist, vibrant print', price:1749, img:'https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80' },
   { id:6, cat:'women', label:'Women', name:'Broderie Blouse', desc:'Eyelet detail, relaxed fit', price:1299, img:'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=600&q=80', badge:'New' },
 
-  // CHILDREN � GIRLS
-  { id:7, cat:'girls', label:'Girls', name:'Floral Frock', desc:'Cotton twirl dress, ages 2�8', price:899, img:'https://images.unsplash.com/photo-1604671801908-b6b73ef31d5a?auto=format&fit=crop&w=600&q=80', badge:'New' },
+  // CHILDREN — GIRLS
+  { id:7, cat:'girls', label:'Girls', name:'Floral Frock', desc:'Cotton twirl dress, ages 2–8', price:899, img:'https://images.unsplash.com/photo-1604671801908-b6b73ef31d5a?auto=format&fit=crop&w=600&q=80', badge:'New' },
   { id:8, cat:'girls', label:'Girls', name:'Tutu Skirt Set', desc:'Rainbow tulle with matching top', price:1099, img:'https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?auto=format&fit=crop&w=600&q=80' },
-  { id:9, cat:'girls', label:'Girls', name:'Denim Jumpsuit', desc:'Adjustable straps, ages 3�10', price:1299, img:'https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?auto=format&fit=crop&w=600&q=80' },
+  { id:9, cat:'girls', label:'Girls', name:'Denim Jumpsuit', desc:'Adjustable straps, ages 3–10', price:1299, img:'https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?auto=format&fit=crop&w=600&q=80' },
   { id:10, cat:'girls', label:'Girls', name:'Party Dress', desc:'Velvet bow detail, festive wear', price:1499, img:'https://images.unsplash.com/photo-1476234251651-f353703a034d?auto=format&fit=crop&w=600&q=80', badge:'New' },
 
-  // CHILDREN � BOYS
+  // CHILDREN — BOYS
   { id:11, cat:'boys', label:'Boys', name:'Kurta Pyjama Set', desc:'Cotton blend, festive collection', price:999, img:'https://images.unsplash.com/photo-1591454919040-6f05a1f0c3cc?auto=format&fit=crop&w=600&q=80' },
-  { id:12, cat:'boys', label:'Boys', name:'Chino Shorts + Shirt', desc:'Smart casual, ages 3�12', price:1199, img:'https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?auto=format&fit=crop&w=600&q=80' },
+  { id:12, cat:'boys', label:'Boys', name:'Chino Shorts + Shirt', desc:'Smart casual, ages 3–12', price:1199, img:'https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?auto=format&fit=crop&w=600&q=80' },
   { id:13, cat:'boys', label:'Boys', name:'Printed Tee + Joggers', desc:'Comfy everyday play outfit', price:799, img:'https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=600&q=80', badge:'Sale', wasPrice:1099 },
 
   // NEWBORNS
-  { id:14, cat:'newborn', label:'Newborn', name:'Organic Onesie 3-Pack', desc:'GOTS certified organic cotton, 0�3 months', price:999, img:'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80', badge:'New' },
+  { id:14, cat:'newborn', label:'Newborn', name:'Organic Onesie 3-Pack', desc:'GOTS certified organic cotton, 0–3 months', price:999, img:'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80', badge:'New' },
   { id:15, cat:'newborn', label:'Newborn', name:'Swaddle Blanket Set', desc:'Muslin cotton, 4-layer softness', price:799, img:'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=600&q=80' },
-  { id:16, cat:'newborn', label:'Newborn', name:'Sleepsuit Gift Set', desc:'5-piece bundled layette, 0�6 months', price:1799, img:'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=600&q=80', badge:'New' },
+  { id:16, cat:'newborn', label:'Newborn', name:'Sleepsuit Gift Set', desc:'5-piece bundled layette, 0–6 months', price:1799, img:'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=600&q=80', badge:'New' },
   { id:17, cat:'newborn', label:'Newborn', name:'Knit Beanie & Bootie Set', desc:'Merino wool blend, hypoallergenic', price:599, img:'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=600&q=80' },
-  { id:18, cat:'newborn', label:'Newborn', name:'Romper with Headband', desc:'Floral print, snap closure, 0�3 months', price:699, img:'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80' },
+  { id:18, cat:'newborn', label:'Newborn', name:'Romper with Headband', desc:'Floral print, snap closure, 0–3 months', price:699, img:'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80' },
 
   // GIFT SETS
   { id:19, cat:'sets', label:'Gift Set', name:'New Baby Luxury Box', desc:'Organic onesie + swaddle + toy', price:2499, img:'https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=600&q=80', badge:'New' },
@@ -1269,7 +1269,7 @@ function openCheckout() {
 
   document.getElementById('billSub').textContent = `?${sub.toLocaleString()}`;
   document.getElementById('billDel').textContent = delivery === 0 ? 'FREE' : `?${delivery}`;
-  document.getElementById('billDisc').textContent = `�?${discount.toLocaleString()}`;
+  document.getElementById('billDisc').textContent = `–?${discount.toLocaleString()}`;
   document.getElementById('billTotal').textContent = `?${total.toLocaleString()}`;
 
   document.getElementById('orderItems').innerHTML = items.map(i => `
@@ -1327,73 +1327,53 @@ function showToast(msg) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.classList.remove('show'), 2800);
 }
-/* ===================== CONFIRM ORDER (FIXED FULL DETAILS FOR TELEGRAM) ===================== */
 function confirmOrder() {
   const fname = document.getElementById('fname').value.trim();
   const phone = document.getElementById('phone').value.trim();
-  const addr  = document.getElementById('addr').value.trim();
-  const city  = document.getElementById('city').value.trim();
-  const pin   = document.getElementById('pin').value.trim();
-
-  const emailInput = document.getElementById('email');
-  const email = emailInput ? emailInput.value.trim() : 'N/A';
-  
-  const paymentInput = document.getElementById('payment');
-  const payment = paymentInput ? paymentInput.value : 'COD';
+  const addr = document.getElementById('addr').value.trim();
+  const city = document.getElementById('city').value.trim();
+  const pin = document.getElementById('pin').value.trim();
 
   if(!fname || !phone || !addr || !city || !pin) {
     showToast('Please fill in all delivery details');
     return;
   }
 
-  // 1. Order ID generate karein
+  // 1. Order ID generate karna
   const orderId = '#ANQ-' + Math.floor(100000 + Math.random()*900000);
-  
-  // 2. Items list banayein (Normal formatting me)
-  const items = Object.values(cart);
-  let itemsText = "";
-  items.forEach((i, index) => {
-    itemsText += `${index + 1}. ${i.name} (Qty: ${i.qty}) - Rs.${i.price * i.qty}\n`;
-  });
 
-  // 3. Calculations
-  const sub = getSubtotal();
-  const delivery = sub >= 1499 ? 0 : 99;
-  const discount = sub >= 2999 ? Math.round(sub * 0.05) : 0;
-  const total = sub + delivery - discount;
-  const delText = delivery === 0 ? 'FREE' : 'Rs.' + delivery;
+  // 2. Jo message Telegram par sunder tarike se dikhega
+  const telegramMessage = `
+🛍️ *New Order Placed!*
+━━━━━━━━━━━━━━━━━━
+🆔 *Order ID:* ${orderId}
+👤 *Name:* ${fname}
+📞 *Phone:* ${phone}
+📍 *Address:* ${addr}, ${city} - ${pin}
+  `;
 
-  // 4. Normal Text Message Format (Bina kisi %0A jhamela ke)
-  const textMessage = 
-    `?? *NAYA ORDER AAYA HAI! (Anaqah)*\n\n` +
-    `?? *Order ID:* ${orderId}\n` +
-    `---------------------------\n` +
-    `?? *Items:* \n${itemsText}` +
-    `?? *Subtotal:* Rs.${sub}\n` +
-    `?? *Delivery:* ${delText}\n` +
-    `?? *Discount:* Rs.${discount}\n` +
-    `?? *Total Payable:* Rs.${total}\n` +
-    `---------------------------\n` +
-    `?? *Customer Name:* ${fname}\n` +
-    `?? *Customer Phone:* ${phone}\n` +
-    `?? *Customer Email:* ${email ? email : 'N/A'}\n` +
-    `?? *Address:* ${addr}, ${city} - ${pin}\n` +
-    `?? *Payment Method:* ${payment}`;
+  // ✅ Aapka Real Telegram Token aur Chat ID yahan set ho gaya hai
+  const botToken = "8569781395:AAGO_pnozAETAaNdwYzEu51p_ZMmbJNtMrc"; 
+  const chatId = "7230867454"; 
 
-  // Aapki real token aur ID details
-  const myToken = "8569781395:AAGO_pnozAETAaNdwYzEu51p_ZMmbJNtMrc"; 
-  const myChatId = "7230867454";     
+  const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
-  // 5. Safe Encoding (Yeh poore message ko secure URL me convert kar dega)
-  const safeMessage = encodeURIComponent(textMessage);
-  const telegramUrl = `https://api.telegram.org/bot${myToken}/sendMessage?chat_id=${myChatId}&text=${safeMessage}&parse_mode=Markdown`;
-  
-  // Send to Telegram background
-  fetch(telegramUrl)
-    .then(res => console.log("Order details sent successfully!"))
-    .catch(err => console.error("Error:", err));
+  // 3. Telegram ko background me message bhejna
+  fetch(telegramUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text: telegramMessage,
+      parse_mode: 'Markdown'
+    })
+  })
+  .then(res => console.log("Telegram notification sent!"))
+  .catch(err => console.error("Telegram error:", err));
 
-  // Website success display
+  // 4. Screen par Success Pop-up dikhana aur cart khali karna
   document.getElementById('checkoutModal').classList.remove('open');
   document.getElementById('orderId').textContent = orderId;
   document.getElementById('successModal').classList.add('open');
